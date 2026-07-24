@@ -294,11 +294,7 @@ input[type="file"] {
 }
 
 .option-name {
-  margin-top: 22px;
-  font-size: 27px;
-  font-weight: 950;
-  text-align: center;
-  color: #1e293b;
+  display: none;
 }
 
 .status-badge {
