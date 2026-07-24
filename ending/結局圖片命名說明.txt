@@ -1,0 +1,6 @@
+ending_0_2.png：答對0~2題
+ending_3_4.png：答對3~4題
+ending_5_6.png：答對5~6題
+ending_7_8.png：答對7~8題
+ending_9.png：答對9題
+ending_10.png：答對10題

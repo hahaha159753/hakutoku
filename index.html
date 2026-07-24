@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>歡迎來到挑戰研究所</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-watermark" aria-hidden="true"></div>
+
+  <section class="screen" id="startScreen">
+    <main class="panel start-panel">
+      <div class="series-label">HAKUTOKU PROJECT</div>
+      <h1>挑戰研究所</h1>
+
+      <p class="intro">
+        本遊戲所使用之品牌、商標與 Logo，其著作權與商標權均屬原權利人所有。<br />
+        本作品僅供教育、研究、識別訓練與非商業娛樂用途，<br />
+        不代表與任何品牌或企業存在合作、認證或從屬關係。
+      </p>
+
+          <div class="challenge-row">
+        <span>挑戰題數</span>
+        <input id="challengeCountInput" class="challenge-count-input" type="number" min="1" value="20" inputmode="numeric" />
+        <span>題</span>
+        <button id="startButton" type="button" disabled>開啟挑戰</button>
+      </div>
+
+      <label for="quizSelect">選擇題庫</label>
+
+      <select id="quizSelect">
+        <option value="">請選擇題庫</option>
+        <option value="./題庫/VTuber小知識挑戰.csv">VTuber 小知識挑戰</option>
+        <option value="./題庫/中文讀音挑戰60題_生活版.csv">中文讀音挑戰</option>
+        <option value="./題庫/動漫角色讀音挑戰60題.csv">動漫角色讀音挑戰</option>
+        <option value="./題庫/來自小哈的挑戰_logoV2.csv">Logo 識別挑戰</option>
+        <option value="./題庫/台灣人最容易念錯的60個字.csv">台灣人容易念錯的字</option>
+        <option value="./題庫/冷笑話問答.csv">冷笑話問答</option>
+        <option value="./題庫/腦筋急轉彎V2.csv">腦筋急轉彎</option>
+      </select>
+
+      <button type="button" id="loadQuizButton">
+        載入所選題庫
+      </button>
+
+      <div class="loaded-info" id="loadedInfo">尚未載入題庫。</div>
+      <div class="small-hint">可自行輸入挑戰題數；超過題庫數量時，會自動使用全部題目。</div>
+    </main>
+  </section>
+
+  <section class="screen hidden" id="quizScreen">
+    <main class="quiz-wrap" id="app">
+      <header class="quiz-header">
+        <div class="series-label"></div>
+        <h1>挑戰研究所</h1>
+        <div class="question-number" id="questionNumber">第 1 題</div>
+        <div class="score-mini" id="scoreMini">目前答對：0</div>
+      </header>
+
+      <div class="question-image-box" id="questionImageBox">
+        <img id="questionImage" src="" alt="題目圖片">
+      </div>
+
+      <section class="question" id="questionText">載入題目中...</section>
+
+      <section class="cards">
+        <article class="card" id="cardA" data-choice="A">
+          <div class="choice-label">A</div>
+          <div class="status-badge correct-badge">正解</div>
+          <div class="status-badge wrong-badge">假</div>
+          <div class="pick-badge">答對！</div>
+          <div class="logo-box option-box" id="optionA"></div>
+          <div class="option-name" id="nameA">版本 A</div>
+        </article>
+
+        <article class="card" id="cardB" data-choice="B">
+          <div class="choice-label">B</div>
+          <div class="status-badge correct-badge">正解</div>
+          <div class="status-badge wrong-badge">假</div>
+          <div class="pick-badge">答對！</div>
+          <div class="logo-box option-box" id="optionB"></div>
+          <div class="option-name" id="nameB">版本 B</div>
+        </article>
+      </section>
+
+      <section class="input-answer-box hidden" id="inputAnswerBox">
+        <input id="answerInput" type="text" autocomplete="off" placeholder="請輸入答案" />
+        <button id="submitAnswerButton" type="button">送出答案</button>
+        <div class="input-answer-hint" id="inputAnswerHint"></div>
+      </section>
+
+      <section class="result-banner" id="resultBanner"></section>
+      <div class="next-hint" id="nextHint">再點一下空白處進入下一題</div>
+      <section class="explanation" id="explanationText"></section>
+
+      <section class="controls">
+        <button id="toggleAnswerButton" type="button">公布 / 隱藏答案</button>
+        <button id="nextButton" type="button">下一題</button>
+        <button id="backButton" type="button">回到開始</button>
+      </section>
+
+      <div class="small-hint">快捷鍵：空白鍵 公布答案｜→ 下一題｜A/B 選答案｜R 回到開始</div>
+    </main>
+  </section>
+
+  <section class="ending-screen hidden" id="endingScreen">
+    <div class="ending-watermark" aria-hidden="true"></div>
+    <div class="ending-card" id="endingFallback">
+      <div class="series-label">獲得的最終評價</div>
+      <img src="" alt="小哈挑戰結算圖" id="endingImage" />
+      <h1 id="endingTitle">挑戰完成</h1>
+      <div class="final-score" id="finalScore">答對 0 / 20 題</div>
+      <p id="endingMessage">點一下回到開始畫面</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
