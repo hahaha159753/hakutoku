@@ -1,0 +1,9 @@
+type,question,answerText,questionImage,nameA,nameB,imageA,imageB,textA,textB,correct
+input_retry,三個字,周杰倫,questions\周杰倫.png,,,,,,,
+input_retry,四個字,子午計畫,questions\子午計劃 .png,,,,,,,
+input_retry,四個字,心花怒放,questions\心花怒放.png,,,,,,,
+input_retry,四個字,依托咪酯,questions\依托咪酯.png,,,,,,,
+input_retry,四個字,拖泥帶水,questions\拖泥帶水.png,,,,,,,
+input_retry,四個字,東窗事發,questions\東窗事發.png,,,,,,,
+input_retry,四個字,特戰英豪,questions\特戰英豪.png,,,,,,,
+input_retry,四個字,異想天開,questions\異想天開.png,,,,,,,
