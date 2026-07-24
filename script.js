@@ -32,12 +32,12 @@ const WRONG_MESSAGES = [
 
 
 const ENDING_RANGES = [
-  { min: 0, max: 4, image: "ending/ending_0_2.png", title: "迷路了蛤?", message: "：你是不是在亂猜？" },
-  { min: 5, max: 8, image: "ending/ending_3_4.png", title: "見習挑戰者", message: "：好像有認真看……但不多。" },
-  { min: 9, max: 12, image: "ending/ending_5_6.png", title: "合格的挑戰者", message: "：已經有及格了！" },
-  { min: 13, max: 16, image: "ending/ending_7_8.png", title: "挑戰達人", message: "：你很厲害耶！" },
-  { min: 17, max: 19, image: "ending/ending_9.png", title: "傳說級挑戰者", message: "：只差一點就滿分！" },
-  { min: 20, max: 20, image: "ending/ending_10.png", title: "超級大師", message: "：太誇張了吧！全部答對！" }
+  { min: 0, max: 4, image: "ending/ending_0_2.png", title: "殭屍模式全開的人", message: "：你是不是在亂猜？" },
+  { min: 5, max: 8, image: "ending/ending_3_4.png", title: "都在睡覺的人", message: "：好像有認真看……但不多。" },
+  { min: 9, max: 12, image: "ending/ending_5_6.png", title: "半夢半醒的人", message: "：已經有及格了！" },
+  { min: 13, max: 16, image: "ending/ending_7_8.png", title: "腦袋清醒的人", message: "：你很厲害耶！" },
+  { min: 17, max: 19, image: "ending/ending_9.png", title: "腦袋有用的人", message: "：只差一點就滿分！" },
+  { min: 20, max: 20, image: "ending/ending_10.png", title: "是個天才", message: "：太誇張了吧！全部答對！" }
 ];
 
 let allQuestions = [];
